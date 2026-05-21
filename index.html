@@ -225,17 +225,22 @@
       font-size: 0.75rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--text-muted);
-      background: none;
+      background: linear-gradient(90deg, var(--gold-dark, #b8860b), var(--gold), var(--gold-light), var(--gold), var(--gold-dark, #b8860b));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s linear infinite;
+      background-color: transparent;
       border: none;
       cursor: pointer;
       padding: 0.5rem 1rem;
-      transition: color 0.3s ease;
+      transition: filter 0.3s ease;
       touch-action: manipulation;
     }
 
     .scroll-indicator button:hover {
-      color: var(--gold-light);
+      filter: brightness(1.3) drop-shadow(0 0 8px rgba(212, 168, 83, 0.4));
     }
 
     .scroll-arrows {
@@ -856,6 +861,33 @@
       filter: drop-shadow(0 1px 4px rgba(26, 10, 46, 0.8));
     }
 
+    .footer-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: linear-gradient(90deg, var(--gold-dark, #b8860b), var(--gold), var(--gold-light), var(--gold), var(--gold-dark, #b8860b));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s linear infinite;
+      transition: filter 0.3s ease;
+    }
+
+    .footer-link:hover {
+      filter: brightness(1.3) drop-shadow(0 0 8px rgba(212, 168, 83, 0.4));
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
     @media (max-width: 1200px) {
       .philosophy-content {
         gap: 3rem;
@@ -1131,6 +1163,7 @@
     <img src="b_A_beautiful_garden_a.jpeg" alt="Garden landscape" class="footer-image">
     <div class="footer-ornament"></div>
     <p>The Alternative Desktop Synthesizer Garden - 2026</p>
+    <a href="https://stacker.news/jasonb" class="footer-link" target="_blank" rel="noopener">MADE BY JASON</a>
   </footer>
 
   <script>
@@ -1644,6 +1677,7 @@
 
     document.querySelector('.scroll-indicator button').addEventListener('click', playPlink);
     document.querySelector('.cta-button[href]').addEventListener('click', playPlink);
+    document.querySelector('.footer-link').addEventListener('click', playPlink);
   </script>
 </body>
 </html>
