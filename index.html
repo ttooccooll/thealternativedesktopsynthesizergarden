@@ -838,4 +838,812 @@
       color: var(--cream);
       font-size: 0.9rem;
       letter-spacing: 0.05em;
-      transition: colo
+      transition: color 0.3s ease;
+      text-shadow: 0 2px 8px rgba(26, 10, 46, 0.9);
+      padding: 1rem 0 0;
+    }
+
+    footer p:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-ornament {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 2rem;
+      opacity: 0.7;
+      filter: drop-shadow(0 1px 4px rgba(26, 10, 46, 0.8));
+    }
+
+    @media (max-width: 1200px) {
+      .philosophy-content {
+        gap: 3rem;
+      }
+
+      .garden-illustration {
+        height: 500px;
+      }
+
+      .instruments-grid {
+        gap: 2rem;
+      }
+
+      .philosophy-text p {
+        color: var(--text-light);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .philosophy-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .garden-illustration {
+        height: 450px;
+        order: -1;
+      }
+
+      .instruments-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .hero-image {
+        height: 50%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 4rem 1.5rem;
+      }
+
+      .hero h1 {
+        letter-spacing: 0.04em;
+      }
+
+      .hero {
+        padding: 1.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .scroll-indicator {
+        bottom: 2rem;
+      }
+
+      .philosophy {
+        padding-top: 6rem;
+      }
+
+      .garden-illustration {
+        height: 350px;
+      }
+
+      .instrument-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .cta {
+        padding: 5rem 1.5rem;
+      }
+
+      .cta-illustration {
+        height: 250px;
+      }
+
+      .cta-button,
+      #dontButton {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+      }
+
+      footer {
+        padding: 5rem 1rem 2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .garden-illustration {
+        height: 280px;
+      }
+
+      @keyframes screenShake {
+        0%, 100% { transform: translate(0, 0); }
+        10% { transform: translate(-6px, -4px); }
+        20% { transform: translate(5px, 3px); }
+        30% { transform: translate(-4px, 5px); }
+        40% { transform: translate(6px, -3px); }
+        50% { transform: translate(-5px, 4px); }
+        60% { transform: translate(4px, -5px); }
+        70% { transform: translate(-6px, 3px); }
+        80% { transform: translate(3px, -4px); }
+        90% { transform: translate(-4px, 6px); }
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="sky"></div>
+  <div class="stars" id="stars"></div>
+  <div class="fireflies" id="fireflies"></div>
+
+  <section class="hero">
+    <img src="a_A_beautiful_garden_a.jpeg" alt="Garden landscape" class="hero-image">
+    <div class="hero-ornament"></div>
+    <h1>
+      <span class="the">The Alternative Desktop</span>
+      Synthesizer
+      <span class="garden">Garden</span>
+    </h1>
+    <div class="hero-ornament"></div>
+    <p class="hero-subtitle">
+      We make synths that are kind of nifty, at best. They don't work well on mobile. Some work with midi. Get off your dang phone.
+    </p>
+    <div class="scroll-indicator">
+      <button onclick="document.getElementById('philosophy').scrollIntoView({behavior: 'smooth'})">Enter</button>
+      <div class="scroll-arrows">
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="philosophy" id="philosophy">
+    <div class="container">
+      <h2 class="section-title fade-in">A Garden Grows</h2>
+      <div class="section-ornament fade-in"></div>
+      <div class="philosophy-content">
+        <div class="philosophy-text fade-in">
+          <p>Every great synthesizer begins as a seed, I think. It is a quiet idea planted in the soil of curiosity, watered by late nights and the hum of a computer fan. Pizza rolls are often times present. Here, we tend to those seeds with care.</p>
+          <p>This garden is a collection of desktop instruments, each one native to the machine it lives on. They are not emulations of hardware past. They are something new, sort of. They are tools grown from the unique character of the personal computer itself.</p>
+          <p>We build for the future of music. For the producer at 2 AM. For the producer at 3 AM. For the producer at 3:30 AM. For the sound designer who hears something no one else has. For anyone who believes the desktop is not a limitation, it is a landscape. Put plants in it.</p>
+        </div>
+        <div class="garden-illustration fade-in">
+          <div class="garden-scene">
+            <img src="b_A_beautiful_garden_a.jpeg" alt="Garden illustration">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instruments" id="instruments">
+    <div class="container">
+      <h2 class="section-title fade-in">Behold, the Fruits of our Labor</h2>
+      <div class="section-ornament fade-in"></div>
+      <div class="instruments-grid">
+        <a href="https://qwertytempered.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
+          <img src="qwerty screenshot.png" alt="QWERTY Tempered" class="instrument-screenshot">
+          <h3>QWERTY Tempered</h3>
+          <p>An equal-tempered instrument born from the keys beneath your fingers. The keyboard becomes a keyboard. May we frighten you?</p>
+          <span class="instrument-tag">Experimental Tuning</span>
+        </a>
+        <a href="https://windowcandy.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
+          <img src="windows screenshot.png" alt="Window Candy" class="instrument-screenshot">
+          <h3>Window Candy</h3>
+          <p>A love letter to an era when the desktop was a frontier. Nostalgia rendered as sound, dial-up tones turned to drones. Is it practical? That's for me to know and for you to know too, unless you don't want to. idk</p>
+          <span class="instrument-tag">Canned Nostalgia</span>
+        </a>
+        <a href="https://labyrinth.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
+          <img src="labyrinth screenshot.png" alt="Labyrinth" class="instrument-screenshot">
+          <h3>Labyrinth</h3>
+          <p>An instrument that tends itself. Knobs turn without your touch, parameters drift like wind through olive branches. Surrender control. Try playing some notes and hitting the wild button frantically for a different, less pleasant approach.</p>
+          <span class="instrument-tag">Autonomous Synth</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vision">
+    <div class="container">
+      <p class="vision-bridge fade-in">These are not static tools. They are living instruments, meant to evolve with you. It is indeed go time, broski. Grab a light beer and do your thang miss twang.</p>
+      <div class="vine-divider fade-in">
+        <svg viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="vineLavender" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#c4b5d0"/>
+              <stop offset="100%" style="stop-color:#6b5a75"/>
+            </radialGradient>
+            <radialGradient id="vineJasmine" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#f0e8d8"/>
+              <stop offset="100%" style="stop-color:#c8bca8"/>
+            </radialGradient>
+          </defs>
+          <path d="M 0 40 Q 60 15 125 40 Q 190 65 250 40 Q 310 15 375 40 Q 440 65 500 40" fill="none" stroke="#5a6e44" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+          <path d="M 25 35 Q 50 50 75 35" fill="none" stroke="#6b7c4e" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <path d="M 150 45 Q 175 30 200 45" fill="none" stroke="#6b7c4e" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <path d="M 300 35 Q 325 50 350 35" fill="none" stroke="#6b7c4e" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <path d="M 425 45 Q 450 30 475 45" fill="none" stroke="#6b7c4e" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <ellipse cx="60" cy="30" rx="10" ry="6" fill="#6b7c4e" opacity="0.5" transform="rotate(-20 60 30)"/>
+          <ellipse cx="125" cy="45" rx="9" ry="5" fill="#8a9c6e" opacity="0.5" transform="rotate(15 125 45)"/>
+          <ellipse cx="190" cy="35" rx="10" ry="6" fill="#6b7c4e" opacity="0.5" transform="rotate(-15 190 35)"/>
+          <ellipse cx="250" cy="48" rx="9" ry="5" fill="#8a9c6e" opacity="0.5" transform="rotate(20 250 48)"/>
+          <ellipse cx="310" cy="28" rx="10" ry="6" fill="#6b7c4e" opacity="0.5" transform="rotate(-20 310 28)"/>
+          <ellipse cx="375" cy="45" rx="9" ry="5" fill="#8a9c6e" opacity="0.5" transform="rotate(15 375 45)"/>
+          <ellipse cx="440" cy="35" rx="10" ry="6" fill="#6b7c4e" opacity="0.5" transform="rotate(-15 440 35)"/>
+          <circle cx="90" cy="25" r="5" fill="url(#vineLavender)" opacity="0.6"/>
+          <circle cx="160" cy="50" r="4" fill="url(#vineJasmine)" opacity="0.6"/>
+          <circle cx="220" cy="30" r="5" fill="url(#vineLavender)" opacity="0.6"/>
+          <circle cx="280" cy="52" r="4" fill="url(#vineJasmine)" opacity="0.6"/>
+          <circle cx="340" cy="22" r="5" fill="url(#vineLavender)" opacity="0.6"/>
+          <circle cx="410" cy="50" r="4" fill="url(#vineJasmine)" opacity="0.6"/>
+          <circle cx="470" cy="30" r="5" fill="url(#vineLavender)" opacity="0.6"/>
+        </svg>
+      </div>
+      <blockquote class="vision-quote fade-in">
+        "We do not build synthesizers to recreate the past. We grow synthesizers to recreate the present."
+      </blockquote>
+      <p class="vision-text fade-in">
+        Each instrument in this garden is free to use, free to modify, and free to inspire. The desktop is our soil. Water is our liquid. Sound is what blooms.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+            <div class="cta-illustration fade-in">
+        <div class="cta-scene">
+          <img src="flux-2-pro_a_A_beautiful_garden_a.jpeg" alt="Garden detail">
+        </div>
+      </div>
+      <div class="vision-cta-bridge fade-in">Step inside and see what has taken root.</div>
+      <br>
+      <div class="section-ornament fade-in"></div>
+      <div class="cta-buttons fade-in">
+        <a href="#instruments" class="cta-button">Explore the Garden</a>
+        <div class="cta-illustration cta-illustration-small">
+          <div class="cta-scene">
+            <img src="recraft-v4_b_A_beautiful_garden_a.png" alt="Garden detail">
+          </div>
+        </div>
+        <button class="cta-button" id="dontButton">Don't Explore the Garden</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="b_A_beautiful_garden_a.jpeg" alt="Garden landscape" class="footer-image">
+    <div class="footer-ornament"></div>
+    <p>The Alternative Desktop Synthesizer Garden - 2026</p>
+  </footer>
+
+  <script>
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 80; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.setProperty('--duration', (2 + Math.random() * 4) + 's');
+      star.style.setProperty('--max-opacity', (0.4 + Math.random() * 0.6));
+      star.style.animationDelay = Math.random() * 5 + 's';
+      star.style.width = (1 + Math.random() * 2) + 'px';
+      star.style.height = star.style.width;
+      starsContainer.appendChild(star);
+    }
+
+    const firefliesContainer = document.getElementById('fireflies');
+    for (let i = 0; i < 20; i++) {
+      const firefly = document.createElement('div');
+      firefly.className = 'firefly';
+      firefly.style.left = (10 + Math.random() * 80) + '%';
+      firefly.style.top = (30 + Math.random() * 60) + '%';
+      firefly.style.setProperty('--duration', (6 + Math.random() * 8) + 's');
+      firefly.style.setProperty('--dx', (-80 + Math.random() * 160) + 'px');
+      firefly.style.setProperty('--dy', (-100 + Math.random() * 100) + 'px');
+      firefly.style.setProperty('--dx2', (-60 + Math.random() * 120) + 'px');
+      firefly.style.setProperty('--dy2', (-60 + Math.random() * 120) + 'px');
+      firefly.style.animationDelay = Math.random() * 10 + 's';
+      firefliesContainer.appendChild(firefly);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    let humStarted = false;
+    let humCtx = null;
+
+    function startHum() {
+      if (humStarted) return;
+      humStarted = true;
+
+      humCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const masterGain = humCtx.createGain();
+      masterGain.gain.value = 1;
+
+      const glideLfo = humCtx.createOscillator();
+      glideLfo.type = 'sine';
+      glideLfo.frequency.value = 0.03;
+      const glideLfoGain = humCtx.createGain();
+      glideLfoGain.gain.value = 6.2;
+      glideLfo.connect(glideLfoGain);
+
+      const voicings = [
+        { freq: 32.70, gain: 0.35, type: 'sine' },
+        { freq: 32.65, gain: 0.25, type: 'sine' },
+        { freq: 32.75, gain: 0.12, type: 'sine' },
+        { freq: 65.41, gain: 0.30, type: 'triangle' },
+        { freq: 164.81, gain: 0.18, type: 'sawtooth' },
+        { freq: 246.94, gain: 0.15, type: 'sawtooth' },
+        { freq: 369.99, gain: 0.10, type: 'sawtooth' },
+        { freq: 440.00, gain: 0.07, type: 'sawtooth' },
+        { freq: 587.33, gain: 0.04, type: 'triangle' },
+        { freq: 783.99, gain: 0.035, type: 'sine' },
+        { freq: 1108.73, gain: 0.020, type: 'sine' },
+        { freq: 1321.00, gain: 0.012, type: 'sine' },
+        { freq: 1663.00, gain: 0.006, type: 'sine' },
+        { freq: 1975.53, gain: 0.006, type: 'sine' },
+      ];
+
+      const oscs = [];
+      const gains = [];
+      const t0 = humCtx.currentTime;
+
+      voicings.forEach((v, i) => {
+        const osc = humCtx.createOscillator();
+        osc.type = v.type;
+        osc.frequency.value = v.freq + (Math.random() - 0.5) * 1.5;
+        glideLfoGain.connect(osc.frequency);
+
+        const g = humCtx.createGain();
+        g.gain.value = 0;
+        const startDelay = i * 1.2;
+        const rampDur = 5 + Math.random() * 4;
+        g.gain.setValueAtTime(0, t0 + startDelay);
+        g.gain.linearRampToValueAtTime(v.gain, t0 + startDelay + rampDur);
+
+        const volLfo = humCtx.createOscillator();
+        volLfo.type = 'sine';
+        volLfo.frequency.value = 0.015 + Math.random() * 0.04;
+        const volLfoGain = humCtx.createGain();
+        volLfoGain.gain.value = v.gain * 0.35;
+        volLfo.connect(volLfoGain);
+        volLfoGain.connect(g.gain);
+        volLfo.start();
+
+        const detuneLfo = humCtx.createOscillator();
+        detuneLfo.type = 'sine';
+        detuneLfo.frequency.value = 0.01 + Math.random() * 0.03;
+        const detuneLfoGain = humCtx.createGain();
+        detuneLfoGain.gain.value = 0.8 + Math.random() * 2;
+        detuneLfo.connect(detuneLfoGain);
+        detuneLfoGain.connect(osc.frequency);
+        detuneLfo.start();
+
+        osc.connect(g);
+
+        if (v.freq >= 400) {
+          const pan = humCtx.createStereoPanner();
+          pan.pan.value = (Math.random() - 0.5) * 0.6;
+
+          const panLfo = humCtx.createOscillator();
+          panLfo.type = 'sine';
+          panLfo.frequency.value = 0.008 + Math.random() * 0.015;
+          const panLfoGain = humCtx.createGain();
+          panLfoGain.gain.value = 0.2 + Math.random() * 0.3;
+          panLfo.connect(panLfoGain);
+          panLfoGain.connect(pan.pan);
+          panLfo.start();
+
+          g.connect(pan);
+          pan.connect(masterGain);
+        } else {
+          g.connect(masterGain);
+        }
+
+        osc.start();
+
+        oscs.push(osc);
+        gains.push(g);
+      });
+
+      const noise = humCtx.createBufferSource();
+      const noiseBuffer = humCtx.createBuffer(1, humCtx.sampleRate * 2, humCtx.sampleRate);
+      const noiseData = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < noiseData.length; i++) {
+        noiseData[i] = (Math.random() * 2 - 1) * 0.5;
+      }
+      noise.buffer = noiseBuffer;
+      noise.loop = true;
+
+      const noiseFilter = humCtx.createBiquadFilter();
+      noiseFilter.type = 'lowpass';
+      noiseFilter.frequency.value = 300;
+      noiseFilter.Q.value = 1;
+
+      const noiseGain = humCtx.createGain();
+      noiseGain.gain.value = 0.08;
+
+      noise.connect(noiseFilter);
+      noiseFilter.connect(noiseGain);
+      noiseGain.connect(masterGain);
+
+      const masterFilter = humCtx.createBiquadFilter();
+      masterFilter.type = 'lowpass';
+      masterFilter.frequency.value = 1200;
+      masterFilter.Q.value = 0.5;
+
+      const filterLfo = humCtx.createOscillator();
+      filterLfo.type = 'sine';
+      filterLfo.frequency.value = 0.008 + Math.random() * 0.012;
+      const filterLfoGain = humCtx.createGain();
+      filterLfoGain.gain.value = 300 + Math.random() * 200;
+      filterLfo.connect(filterLfoGain);
+      filterLfoGain.connect(masterFilter.frequency);
+      filterLfo.start();
+      const masterFilter2 = humCtx.createBiquadFilter();
+      masterFilter2.type = 'bandpass';
+      masterFilter2.frequency.value = 700;
+      masterFilter2.Q.value = 0.3;
+      const filterLfo2 = humCtx.createOscillator();
+      filterLfo2.type = 'sine';
+      filterLfo2.frequency.value = 0.004 + Math.random() * 0.008;
+      const filterLfo2Gain = humCtx.createGain();
+      filterLfo2Gain.gain.value = 400 + Math.random() * 300;
+      filterLfo2.connect(filterLfo2Gain);
+      filterLfo2Gain.connect(masterFilter2.frequency);
+      filterLfo2.start();
+      const masterFilter3 = humCtx.createBiquadFilter();
+      masterFilter3.type = 'highpass';
+      masterFilter3.frequency.value = 100;
+      masterFilter3.Q.value = 0.5;
+      const filterLfo3 = humCtx.createOscillator();
+      filterLfo3.type = 'sine';
+      filterLfo3.frequency.value = 0.02 + Math.random() * 0.02;
+      const filterLfo3Gain = humCtx.createGain();
+      filterLfo3Gain.gain.value = 80 + Math.random() * 60;
+      filterLfo3.connect(filterLfo3Gain);
+      filterLfo3Gain.connect(masterFilter3.frequency);
+      filterLfo3.start();
+      const masterFilter4 = humCtx.createBiquadFilter();
+      masterFilter4.type = 'bandpass';
+      masterFilter4.frequency.value = 400;
+      masterFilter4.Q.value = 0.8;
+      const filterLfo4 = humCtx.createOscillator();
+      filterLfo4.type = 'sine';
+      filterLfo4.frequency.value = 0.015 + Math.random() * 0.01;
+      const filterLfo4Gain = humCtx.createGain();
+      filterLfo4Gain.gain.value = 200 + Math.random() * 150;
+      filterLfo4.connect(filterLfo4Gain);
+      filterLfo4Gain.connect(masterFilter4.frequency);
+      filterLfo4.start();
+
+      const panner = humCtx.createStereoPanner();
+
+      const panLfo = humCtx.createOscillator();
+      panLfo.type = 'sine';
+      panLfo.frequency.value = 0.005 + Math.random() * 0.01;
+      const panLfoGain = humCtx.createGain();
+      panLfoGain.gain.value = 0.3 + Math.random() * 0.3;
+      panLfo.connect(panLfoGain);
+      panLfoGain.connect(panner.pan);
+      panLfo.start();
+
+      masterGain.connect(masterFilter);
+      masterFilter.connect(masterFilter2);
+      masterFilter2.connect(masterFilter3);
+      masterFilter3.connect(masterFilter4);
+      masterFilter4.connect(panner);
+
+      const saturator = humCtx.createWaveShaper();
+      const satCurve = new Float32Array(65536);
+      for (let i = 0; i < 65536; i++) {
+        const x = (i * 2) / 65536 - 1;
+        satCurve[i] = Math.tanh(x * 1.5) * 0.95 + x * 0.05;
+      }
+      saturator.curve = satCurve;
+
+      panner.connect(saturator);
+
+      const chorusDelay = humCtx.createDelay(0.05);
+      chorusDelay.delayTime.value = 0.02;
+
+      const chorusLfo = humCtx.createOscillator();
+      chorusLfo.type = 'sine';
+      chorusLfo.frequency.value = 0.15;
+      const chorusLfoGain = humCtx.createGain();
+      chorusLfoGain.gain.value = 0.005;
+      chorusLfo.connect(chorusLfoGain);
+      chorusLfoGain.connect(chorusDelay.delayTime);
+      chorusLfo.start();
+
+      const chorusGain = humCtx.createGain();
+      chorusGain.gain.value = 0.3;
+
+      const chorusMixLfo = humCtx.createOscillator();
+      chorusMixLfo.type = 'sine';
+      chorusMixLfo.frequency.value = 0.007;
+      const chorusMixLfoGain = humCtx.createGain();
+      chorusMixLfoGain.gain.value = 0.2;
+      chorusMixLfo.connect(chorusMixLfoGain);
+      chorusMixLfoGain.connect(chorusGain.gain);
+      chorusMixLfo.start();
+
+      panner.connect(chorusDelay);
+      chorusDelay.connect(chorusGain);
+
+      const irLength = humCtx.sampleRate * 7;
+      const irBuffer = humCtx.createBuffer(2, irLength, humCtx.sampleRate);
+      for (let ch = 0; ch < 2; ch++) {
+        const irData = irBuffer.getChannelData(ch);
+        for (let i = 0; i < irLength; i++) {
+          irData[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / irLength, 2.2);
+        }
+      }
+      const convolver = humCtx.createConvolver();
+      convolver.buffer = irBuffer;
+
+      const reverbGain = humCtx.createGain();
+      reverbGain.gain.value = 0.75;
+
+      const dryGain = humCtx.createGain();
+      dryGain.gain.value = 0.5;
+
+      saturator.connect(dryGain);
+      dryGain.connect(humCtx.destination);
+      saturator.connect(convolver);
+      convolver.connect(reverbGain);
+      reverbGain.connect(humCtx.destination);
+
+      saturator.connect(delayL);
+      delayL.connect(delayR);
+      delayR.connect(delayGain);
+      delayR.connect(delayFeedback);
+      delayFeedback.connect(delayL);
+
+      delayGain.connect(humCtx.destination);
+      delayGain.connect(convolver);
+
+      glideLfo.start();
+    }
+
+    document.querySelector('.scroll-indicator button').addEventListener('click', startHum);
+    document.addEventListener('click', startHum, { once: true });
+
+    document.getElementById('dontButton').addEventListener('click', () => {
+      const btn = document.getElementById('dontButton');
+      if (document.body.classList.contains('chaos')) return;
+      document.body.classList.add('chaos');
+      btn.style.background = 'linear-gradient(135deg, #ff0040, #8b0000)';
+      btn.style.borderColor = '#ff0040';
+      btn.style.color = '#fff';
+
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const duration = 3;
+      const sampleRate = ctx.sampleRate;
+      const buffer = ctx.createBuffer(2, sampleRate * duration, sampleRate);
+
+      for (let ch = 0; ch < 2; ch++) {
+        const data = buffer.getChannelData(ch);
+        const pan = ch === 0 ? -1 : 1;
+
+        for (let i = 0; i < data.length; i++) {
+          const t = i / sampleRate;
+          const slowEnv = Math.exp(-t * 0.8);
+          const fastEnv = Math.exp(-t * 3);
+          const lfo1 = Math.sin(2 * Math.PI * 3.7 * t);
+          const lfo2 = Math.sin(2 * Math.PI * 7.3 * t);
+          const lfo3 = Math.sin(2 * Math.PI * 13.1 * t);
+
+          const freq1 = 55 + lfo1 * 40 + lfo2 * 20;
+          const freq2 = 58.3 + lfo1 * 35 + lfo3 * 25;
+          const freq3 = 116.5 + lfo2 * 60;
+          const freq4 = 165 + lfo1 * 80 + lfo3 * 40;
+          const freq5 = 233 + lfo2 * 100;
+          const freq6 = 349 + lfo3 * 150;
+          const freq7 = 466 + lfo1 * 200;
+          const freq8 = 622 + lfo2 * 250;
+          const freq9 = 880 + lfo3 * 300;
+          const freq10 = 1200 + lfo1 * 500;
+
+          const fm1 = Math.sin(2 * Math.PI * (freq1 + 300 * Math.sin(2 * Math.PI * 17 * t)) * t);
+          const fm2 = Math.sin(2 * Math.PI * (freq2 + 500 * Math.sin(2 * Math.PI * 23 * t)) * t);
+          const fm3 = Math.sin(2 * Math.PI * (freq3 + 800 * Math.sin(2 * Math.PI * 31 * t)) * t);
+
+          const ring1 = Math.sin(2 * Math.PI * freq4 * t) * Math.sin(2 * Math.PI * freq7 * t);
+          const ring2 = Math.sin(2 * Math.PI * freq5 * t) * Math.sin(2 * Math.PI * freq8 * t);
+          const ring3 = Math.sin(2 * Math.PI * freq6 * t) * Math.sin(2 * Math.PI * freq9 * t);
+
+          const noise1 = (Math.random() * 2 - 1) * fastEnv;
+          const noise2 = (Math.random() * 2 - 1) * Math.abs(lfo1) * slowEnv;
+          const noise3 = (Math.random() * 2 - 1) * Math.exp(-t * 0.5) * 0.5;
+
+          const clickTrain = (Math.sin(2 * Math.PI * 4000 * t) > 0.95 ? 0.3 : 0) * Math.exp(-t * 2);
+          const siren = Math.sin(2 * Math.PI * (200 + 600 * Math.sin(2 * Math.PI * 2.3 * t)) * t) * slowEnv;
+          const drill = Math.sin(2 * Math.PI * (50 + 2000 * Math.random() * Math.exp(-t * 4)) * t) * fastEnv;
+
+          const sub1 = Math.sin(2 * Math.PI * 20 * t) * slowEnv * 0.5;
+          const sub2 = Math.sin(2 * Math.PI * 25 * t + 0.5) * slowEnv * 0.4;
+          const sub3 = Math.sin(2 * Math.PI * 30 * t + 1.2) * slowEnv * 0.35;
+          const sub4 = Math.sin(2 * Math.PI * (18 + 8 * lfo1) * t) * slowEnv * 0.3;
+          const sub5 = Math.sin(2 * Math.PI * 35 * t) * Math.exp(-t * 0.6) * 0.4;
+
+          const rumble1 = Math.sin(2 * Math.PI * 40 * t) * slowEnv * 0.3 * (1 + 0.2 * lfo2);
+          const rumble2 = Math.sin(2 * Math.PI * 45 * t) * slowEnv * 0.25 * (1 + 0.15 * lfo3);
+          const rumble3 = Math.sin(2 * Math.PI * (32 + 15 * lfo1) * t) * slowEnv * 0.2;
+
+          const lowGrowl = Math.sin(2 * Math.PI * 50 * t + 2 * Math.sin(2 * Math.PI * 8 * t)) * slowEnv * 0.25;
+
+          let sample = (
+            fm1 * 0.15 +
+            fm2 * 0.15 +
+            fm3 * 0.1 +
+            ring1 * 0.1 +
+            ring2 * 0.1 +
+            ring3 * 0.08 +
+            noise1 * 0.2 +
+            noise2 * 0.15 +
+            noise3 * 0.1 +
+            clickTrain * 0.2 +
+            siren * 0.12 +
+            drill * 0.1 +
+            Math.sin(2 * Math.PI * freq10 * t) * 0.05 * slowEnv +
+            sub1 + sub2 + sub3 + sub4 + sub5 +
+            rumble1 + rumble2 + rumble3 +
+            lowGrowl
+          );
+
+          sample *= (0.9 + 0.1 * Math.sin(2 * Math.PI * 5 * t));
+          sample = Math.tanh(sample * 4) * 0.8;
+          sample *= (1 + 0.15 * pan);
+
+          data[i] = sample;
+        }
+      }
+
+      const source = ctx.createBufferSource();
+      source.buffer = buffer;
+
+      const distortion = ctx.createWaveShaper();
+      const curve = new Float32Array(65536);
+      for (let i = 0; i < 65536; i++) {
+        const x = (i * 2) / 65536 - 1;
+        const k = 200;
+        curve[i] = ((3 + k) * x * 20 * (Math.PI / 180)) / (Math.PI + k * Math.abs(x));
+      }
+      distortion.curve = curve;
+
+      const compressor = ctx.createDynamicsCompressor();
+      compressor.threshold.value = -20;
+      compressor.knee.value = 0;
+      compressor.ratio.value = 1;
+      compressor.attack.value = 0;
+      compressor.release.value = 0;
+
+      const gain = ctx.createGain();
+      gain.gain.value = 0.7;
+
+      source.connect(distortion);
+      distortion.connect(compressor);
+      compressor.connect(gain);
+      gain.connect(ctx.destination);
+      source.start();
+
+      source.onended = () => {
+        document.body.classList.remove('chaos');
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        btn.style.color = '';
+        ctx.close();
+      };
+    });
+
+    function playPlink() {
+      if (!humCtx) return;
+      const t = humCtx.currentTime;
+      const plinkGain = humCtx.createGain();
+      plinkGain.gain.value = 0;
+      plinkGain.gain.setValueAtTime(0.5, t);
+      plinkGain.gain.exponentialRampToValueAtTime(0.001, t + 1.5);
+
+      const plinkMaster = humCtx.createGain();
+      plinkMaster.gain.value = 0.4;
+
+      const notes = [1108.73, 1321.00, 1663.00, 2093.00];
+      notes.forEach((freq, i) => {
+        const osc = humCtx.createOscillator();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        const g = humCtx.createGain();
+        g.gain.value = 0.15 - i * 0.03;
+        osc.connect(g);
+        g.connect(plinkGain);
+        osc.start(t + i * 0.04);
+        osc.stop(t + 2);
+      });
+
+      const delayL = humCtx.createDelay(3.0);
+      delayL.delayTime.value = 0.3;
+      const delayR = humCtx.createDelay(3.0);
+      delayR.delayTime.value = 0.38;
+
+      const delayFilter = humCtx.createBiquadFilter();
+      delayFilter.type = 'lowpass';
+      delayFilter.frequency.value = 2000;
+      delayFilter.Q.value = 0.5;
+
+      const delayPan = humCtx.createStereoPanner();
+      delayPan.pan.value = 0;
+
+      const delayPanLfo = humCtx.createOscillator();
+      delayPanLfo.type = 'sine';
+      delayPanLfo.frequency.value = 0.15;
+      const delayPanLfoGain = humCtx.createGain();
+      delayPanLfoGain.gain.value = 0.5;
+      delayPanLfo.connect(delayPanLfoGain);
+      delayPanLfoGain.connect(delayPan.pan);
+      delayPanLfo.start();
+
+      const delayFeedback = humCtx.createGain();
+      delayFeedback.gain.value = 0.5;
+
+      const delayOut = humCtx.createGain();
+      delayOut.gain.value = 0.6;
+
+      const plinkReverb = humCtx.createConvolver();
+      const irLength = humCtx.sampleRate * 8;
+      const irBuffer = humCtx.createBuffer(2, irLength, humCtx.sampleRate);
+      for (let ch = 0; ch < 2; ch++) {
+        const irData = irBuffer.getChannelData(ch);
+        for (let i = 0; i < irLength; i++) {
+          irData[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / irLength, 1.8);
+        }
+      }
+      plinkReverb.buffer = irBuffer;
+
+      const plinkReverbGain = humCtx.createGain();
+      plinkReverbGain.gain.value = 1.2;
+
+      plinkGain.connect(plinkMaster);
+      plinkMaster.connect(humCtx.destination);
+      plinkMaster.connect(delayL);
+      delayL.connect(delayR);
+      delayR.connect(delayFilter);
+      delayFilter.connect(delayPan);
+      delayPan.connect(delayOut);
+      delayPan.connect(delayFeedback);
+      delayFeedback.connect(delayL);
+      delayOut.connect(humCtx.destination);
+      delayOut.connect(plinkReverb);
+      plinkReverb.connect(plinkReverbGain);
+      plinkReverbGain.connect(humCtx.destination);
+    }
+
+    document.querySelector('.scroll-indicator button').addEventListener('click', playPlink);
+    document.querySelector('.cta-button[href]').addEventListener('click', playPlink);
+  </script>
+</body>
+</html>
