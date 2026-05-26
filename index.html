@@ -1096,6 +1096,12 @@
           <p>An instrument that tends itself. Knobs turn without your touch, parameters drift like wind through olive branches. Surrender control. Try playing some notes and hitting the wild button frantically for a different, less pleasant approach.</p>
           <span class="instrument-tag">Autonomous Synth</span>
         </a>
+        <a href="https://equaljustice.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
+          <img src="equal justice screenshot.png" alt="Equal Justice" class="instrument-screenshot">
+          <h3>Equal Justice</h3>
+          <p>One note to rule them all, and in the equal temperament bind them. One ground note, locked in perfect (well, equal) temperament, while every overtone floats above in pure just intonation. It's like building a church on a parking lot. Beautiful above, asphalt below. Does it sound incredible? Only if you don't think too hard about the foundation.</p>
+          <span class="instrument-tag">Hybrid Tuning</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1408,6 +1414,29 @@
       saturator.curve = satCurve;
 
       panner.connect(saturator);
+
+      const delayL = humCtx.createDelay(3.0);
+      delayL.delayTime.value = 0.3;
+      const delayR = humCtx.createDelay(3.0);
+      delayR.delayTime.value = 0.38;
+      const delayGain = humCtx.createGain();
+      delayGain.gain.value = 0.6;
+      const delayFeedback = humCtx.createGain();
+      delayFeedback.gain.value = 0.5;
+
+      const delayFilter = humCtx.createBiquadFilter();
+      delayFilter.type = 'lowpass';
+      delayFilter.frequency.value = 1800;
+      delayFilter.Q.value = 0.5;
+
+      saturator.connect(delayL);
+      delayL.connect(delayR);
+      delayR.connect(delayGain);
+      delayR.connect(delayFeedback);
+      delayFeedback.connect(delayL);
+
+      delayGain.connect(humCtx.destination);
+      delayGain.connect(convolver);
 
       const chorusDelay = humCtx.createDelay(0.05);
       chorusDelay.delayTime.value = 0.02;
