@@ -11,8 +11,10 @@ A landing page for a collection of desktop-native synthesizer instruments. Built
 Each instrument lives on its own subdomain:
 
 - [QWERTY Tempered](https://qwertytempered.thealternativedesktopsynthesizer.garden) — Equal-tempered instrument using your keyboard
-- [Window Candy](https://windowcandy.thealternativedesktopsynthesizergarden.garden) — Nostalgia rendered as sound
+- [Window Candy](https://windowcandy.thealternativedesktopsynthesizer.garden) — Nostalgia rendered as sound
 - [Labyrinth](https://labyrinth.thealternativedesktopsynthesizer.garden) — Autonomous self-tending synth
+- [Equal Justice](https://equaljustice.thealternativedesktopsynthesizer.garden) — Hybrid tuning: an equal-tempered ground note with just-intonation overtones
+- [Poly Molly](https://polymolly.thealternativedesktopsynthesizer.garden) — Polyrhythmic synthesized drum machine
 
 ## Features
 

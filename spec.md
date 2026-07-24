@@ -9,16 +9,22 @@ A single-page, self-contained HTML landing page for a project that creates deskt
 ```
 thealternativedesktopsynthesizergarden/
   index.html          # Single-file application (HTML + CSS + JS)
-  a_A_beautiful_garden_a.jpeg   # Hero image and CTA section image
+  a_A_beautiful_garden_a.jpeg   # Hero image (1920px, optimized)
   b_A_beautiful_garden_a.jpeg   # Philosophy section illustration and footer image
   flux-2-pro_a_A_beautiful_garden_a.jpeg   # CTA section image
-  recraft-v4_b_A_beautiful_garden_a.png    # CTA section small image between buttons
+  cta-garden-small.jpg          # CTA section small image between buttons
+  og-image.jpg                  # 1200x630 social share image (Open Graph / Twitter)
+  recraft-v4_b_A_beautiful_garden_a.png    # Full-res source for cta-garden-small.jpg (not referenced by the page)
   qwerty screenshot.png   # QWERTY Tempered instrument card screenshot
   windows screenshot.png  # Window Candy instrument card screenshot
   labyrinth screenshot.png # Labyrinth instrument card screenshot
+  equal justice screenshot.png # Equal Justice instrument card screenshot
+  Poly Molly Screenshot.png    # Poly Molly instrument card screenshot
   spec.md             # This file
   README.md           # Project readme
 ```
+
+Below-the-fold images use `loading="lazy"` and `decoding="async"`; instrument screenshots carry explicit `width`/`height` attributes (with CSS `height: auto`) to reserve layout space. The head includes SEO meta tags, Open Graph/Twitter cards pointing at `og-image.jpg`, JSON-LD structured data, and an inline SVG seedling favicon.
 
 ## Technical Stack
 
@@ -53,21 +59,23 @@ thealternativedesktopsynthesizergarden/
 - Garden illustration: `b_A_beautiful_garden_a.jpeg` with radial mask and drop-shadow, scales on hover (1.5s transition)
 - Drop cap on first paragraph (gold, 4rem Cormorant Garamond)
 - Text content:
-  - Paragraph 1: "Every great synthesizer begins as a seed, I think. It is a quiet idea planted in the soil of curiosity, watered by late nights and the hum of a computer fan. Pizza rolls are often times present. Here, we tend to those seeds with care."
-  - Paragraph 2: "This garden is a collection of desktop instruments, each one native to the machine it lives on. They are not emulations of hardware past. They are something new, sort of. They are tools grown from the unique character of the personal computer itself."
-  - Paragraph 3: "We build for the future of music. For the producer at 2 AM. For the producer at 3 AM. For the producer at 3:30 AM. For the sound designer who hears something no one else has. For anyone who believes the desktop is not a limitation, it is a landscape. Put plants in it."
+  - Paragraph 1: "Every great synthesizer begins as a seed. Or a weed. I failed school, so I cannot confirm. It is a quiet idea planted in the soil of curiosity, watered by late nights and a computer fan that sounds like a jet engine. Pizza rolls are often times present. Here, we tend to those seeds with care and also fear."
+  - Paragraph 2: "This garden is a collection of desktop instruments, each one native to the machine it lives on. They are not emulations of hardware past. They are mutilations of hardware past. They are tools grown from whatever the personal computer itself has to offer, which is usually weird and always running too many tabs."
+  - Paragraph 3 (purple-paragraph class, dark purple with hover effect): "We build for the future of music. For the producer at 2 AM. For the producer at 3 AM who forgot to eat. For the producer at 3:30 AM whose reverb sounds incredible but whose life is a disaster. For anyone who believes the desktop is not a limitation, it is a landscape. Put plants in it. This is all very serious."
 - Fade-in on scroll via IntersectionObserver
 - Text paragraphs lighten on hover
 - Background gradient transitions from sky-black to sky-light
 
-### 3. Instruments ("What Grows Here")
-- Three instrument cards in a grid, each linking to its subdomain:
+### 3. Instruments ("Behold, the Fruits of our Labor")
+- Five instrument cards in a grid, each linking to its subdomain:
 
 | Card | Name | Subdomain | Description | Tag |
 |------|------|-----------|-------------|-----|
 | 1 | QWERTY Tempered | qwertytempered.thealternativedesktopsynthesizer.garden | An equal-tempered instrument born from the keys beneath your fingers. The keyboard becomes a keyboard. May we frighten you? | Experimental Tuning |
 | 2 | Window Candy | windowcandy.thealternativedesktopsynthesizer.garden | A love letter to an era when the desktop was a frontier. Nostalgia rendered as sound, dial-up tones turned to drones. Is it practical? That's for me to know and for you to know too, unless you don't want to. idk | Canned Nostalgia |
 | 3 | Labyrinth | labyrinth.thealternativedesktopsynthesizer.garden | An instrument that tends itself. Knobs turn without your touch, parameters drift like wind through olive branches. Surrender control. Try playing some notes and hitting the wild button frantically for a different, less pleasant approach. | Autonomous Synth |
+| 4 | Equal Justice | equaljustice.thealternativedesktopsynthesizer.garden | One note to rule them all, and in the equal temperament bind them. One ground note, locked in perfect (well, equal) temperament, while every overtone floats above in pure just intonation. It's like building a church on a parking lot. Beautiful above, asphalt below. Does it sound incredible? Only if you don't think too hard about the foundation. | Hybrid Tuning |
+| 5 | Poly Molly | polymolly.thealternativedesktopsynthesizer.garden | A polyrhythmic synthesized drum machine that plays in more time signatures than you can count on both hands. And maybe some feet. Set your ratios, hit start, and try not to think about the existential implications of a hi-hat existing in 7/4 while the kick is in 4/4. Your brain will adjust. Probably. | Polyrhythmic Drums |
 
 - Each card has a full-width screenshot with triple-layered flamboyant border (inner gold gradient, dark outer frame, outermost gold gradient)
 - Screenshots at 55% opacity by default, fully opaque on hover
@@ -86,7 +94,7 @@ thealternativedesktopsynthesizergarden/
 - Flux image at top with slow hover scale (1.5s)
 - "Step inside and see what has taken root." text (gold, italic Cormorant Garamond)
 - Gold ornament divider
-- Button row: "Explore the Garden" link → small recraft image → "Don't Explore the Garden" button
+- Button row: "Explore the Garden" link → small garden image (`cta-garden-small.jpg`) → "Don't Explore the Garden" button
 - "Explore the Garden" links to `#instruments` and triggers a plink sound
 - Terracotta-to-gold gradient background on buttons
 - Hover effects: ripple expansion, gradient shift to gold/terracotta, box-shadow glow, slight lift
@@ -96,6 +104,7 @@ thealternativedesktopsynthesizergarden/
 - Gold gradient overlay from bottom
 - Gold ornament line
 - Copyright: "The Alternative Desktop Synthesizer Garden - 2026"
+- "MADE BY JASONB" link to stacker.news/jasonb (plays plink on click)
 - Footer text lightens to gold on hover
 
 ## Visual Design
@@ -118,6 +127,7 @@ thealternativedesktopsynthesizergarden/
 - **Vine divider hover** - opacity increase and slight scale
 - **CTA button hover** - ripple expansion, gradient shift, box-shadow glow
 - **Image hover** - slow 1.5s scale and filter transitions
+- **Reduced motion** - `prefers-reduced-motion: reduce` disables the chaos screen shake and color flash, firefly movement, and the scroll-indicator bob
 
 ### Responsive Breakpoints
 - 1200px - reduced gaps (3rem/2rem), garden illustration height 500px, philosophy text light

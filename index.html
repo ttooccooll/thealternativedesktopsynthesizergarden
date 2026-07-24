@@ -4,24 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Alternative Desktop Synthesizer Garden</title>
-  <meta name="description" content="A curated garden of experimental desktop-native synthesizer instruments. Free to use, free to modify, and free to inspire. Discover QWERTY Tempered, Window Candy, Labyrinth, and Equal Justice.">
-  <meta name="keywords" content="synthesizer, synth, desktop music, experimental music, web audio, digital audio, music production, free synth, browser synth, QWERTY Tempered, Window Candy, Labyrinth, Equal Justice">
+  <meta name="description" content="A curated garden of experimental desktop-native synthesizer instruments. Free to use, free to modify, and free to inspire. Discover QWERTY Tempered, Window Candy, Labyrinth, Equal Justice, and Poly Molly.">
+  <meta name="keywords" content="synthesizer, synth, desktop music, experimental music, web audio, digital audio, music production, free synth, browser synth, QWERTY Tempered, Window Candy, Labyrinth, Equal Justice, Poly Molly, drum machine, polyrhythm">
   <meta name="author" content="Jason Branscum">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://thealternativedesktopsynthesizer.garden/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thealternativedesktopsynthesizer.garden/">
   <meta property="og:title" content="The Alternative Desktop Synthesizer Garden">
   <meta property="og:description" content="A curated garden of experimental desktop-native synthesizer instruments. Free to use, free to modify, and free to inspire.">
-  <meta property="og:image" content="https://thealternativedesktopsynthesizer.garden/recraft-v4_b_A_beautiful_garden_a.png">
+  <meta property="og:image" content="https://thealternativedesktopsynthesizer.garden/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Alternative Desktop Synthesizer Garden">
   <meta name="twitter:description" content="A curated garden of experimental desktop-native synthesizer instruments.">
-  <meta name="twitter:image" content="https://thealternativedesktopsynthesizer.garden/recraft-v4_b_A_beautiful_garden_a.png">
+  <meta name="twitter:image" content="https://thealternativedesktopsynthesizer.garden/og-image.jpg">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -545,6 +548,7 @@
 
     .instrument-screenshot {
       width: 100%;
+      height: auto;
       margin-bottom: 1.5rem;
       border-radius: 4px;
       transition: all 0.4s ease;
@@ -911,6 +915,18 @@
       animation: colorFlash 0.3s ease-in-out 10;
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      body.chaos,
+      body.chaos .sky {
+        animation: none;
+      }
+
+      .firefly,
+      .scroll-indicator {
+        animation: none;
+      }
+    }
+
     footer {
       text-align: center;
       padding: 6rem 2rem 3rem;
@@ -1134,7 +1150,7 @@
   <div class="fireflies" id="fireflies"></div>
 
   <section class="hero">
-    <img src="a_A_beautiful_garden_a.jpeg" alt="Garden landscape" class="hero-image">
+    <img src="a_A_beautiful_garden_a.jpeg" alt="Garden landscape" class="hero-image" fetchpriority="high">
     <div class="hero-ornament"></div>
     <h1>
       <span class="the">The Alternative Desktop</span>
@@ -1167,7 +1183,7 @@
         </div>
         <div class="garden-illustration fade-in">
           <div class="garden-scene">
-            <img src="b_A_beautiful_garden_a.jpeg" alt="Garden illustration">
+            <img src="b_A_beautiful_garden_a.jpeg" alt="Garden illustration" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -1180,31 +1196,31 @@
       <div class="section-ornament fade-in"></div>
       <div class="instruments-grid">
         <a href="https://qwertytempered.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
-          <img src="qwerty screenshot.png" alt="QWERTY Tempered" class="instrument-screenshot">
+          <img src="qwerty screenshot.png" alt="QWERTY Tempered" class="instrument-screenshot" width="841" height="784" loading="lazy" decoding="async">
           <h3>QWERTY Tempered</h3>
           <p>An equal-tempered instrument born from the keys beneath your fingers. The keyboard becomes a keyboard. May we frighten you?</p>
           <span class="instrument-tag">Experimental Tuning</span>
         </a>
         <a href="https://windowcandy.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
-          <img src="windows screenshot.png" alt="Window Candy" class="instrument-screenshot">
+          <img src="windows screenshot.png" alt="Window Candy" class="instrument-screenshot" width="1298" height="904" loading="lazy" decoding="async">
           <h3>Window Candy</h3>
           <p>A love letter to an era when the desktop was a frontier. Nostalgia rendered as sound, dial-up tones turned to drones. Is it practical? That's for me to know and for you to know too, unless you don't want to. idk</p>
           <span class="instrument-tag">Canned Nostalgia</span>
         </a>
         <a href="https://labyrinth.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
-          <img src="labyrinth screenshot.png" alt="Labyrinth" class="instrument-screenshot">
+          <img src="labyrinth screenshot.png" alt="Labyrinth" class="instrument-screenshot" width="1295" height="903" loading="lazy" decoding="async">
           <h3>Labyrinth</h3>
           <p>An instrument that tends itself. Knobs turn without your touch, parameters drift like wind through olive branches. Surrender control. Try playing some notes and hitting the wild button frantically for a different, less pleasant approach.</p>
           <span class="instrument-tag">Autonomous Synth</span>
         </a>
         <a href="https://equaljustice.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
-          <img src="equal justice screenshot.png" alt="Equal Justice" class="instrument-screenshot">
+          <img src="equal justice screenshot.png" alt="Equal Justice" class="instrument-screenshot" width="1226" height="899" loading="lazy" decoding="async">
           <h3>Equal Justice</h3>
           <p>One note to rule them all, and in the equal temperament bind them. One ground note, locked in perfect (well, equal) temperament, while every overtone floats above in pure just intonation. It's like building a church on a parking lot. Beautiful above, asphalt below. Does it sound incredible? Only if you don't think too hard about the foundation.</p>
           <span class="instrument-tag">Hybrid Tuning</span>
         </a>
         <a href="https://polymolly.thealternativedesktopsynthesizer.garden" class="instrument-card fade-in">
-          <img src="Poly Molly Screenshot.png" alt="Poly Molly" class="instrument-screenshot">
+          <img src="Poly Molly Screenshot.png" alt="Poly Molly" class="instrument-screenshot" width="1047" height="904" loading="lazy" decoding="async">
           <h3>Poly Molly</h3>
           <p>A polyrhythmic synthesized drum machine that plays in more time signatures than you can count on both hands. And maybe some feet. Set your ratios, hit start, and try not to think about the existential implications of a hi-hat existing in 7/4 while the kick is in 4/4. Your brain will adjust. Probably.</p>
           <span class="instrument-tag">Polyrhythmic Drums</span>
@@ -1262,7 +1278,7 @@
     <div class="container">
             <div class="cta-illustration fade-in">
         <div class="cta-scene">
-          <img src="flux-2-pro_a_A_beautiful_garden_a.jpeg" alt="Garden detail">
+          <img src="flux-2-pro_a_A_beautiful_garden_a.jpeg" alt="Garden detail" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="vision-cta-bridge fade-in">Step inside and see what has taken root.</div>
@@ -1272,7 +1288,7 @@
         <a href="#instruments" class="cta-button">Explore the Garden</a>
         <div class="cta-illustration cta-illustration-small">
           <div class="cta-scene">
-            <img src="recraft-v4_b_A_beautiful_garden_a.png" alt="Garden detail">
+            <img src="cta-garden-small.jpg" alt="Garden detail" loading="lazy" decoding="async">
           </div>
         </div>
         <button class="cta-button" id="dontButton">Don't Explore the Garden</button>
@@ -1281,7 +1297,7 @@
   </section>
 
   <footer>
-    <img src="b_A_beautiful_garden_a.jpeg" alt="Garden landscape" class="footer-image">
+    <img src="b_A_beautiful_garden_a.jpeg" alt="Garden landscape" class="footer-image" loading="lazy" decoding="async">
     <div class="footer-ornament"></div>
     <p>The Alternative Desktop Synthesizer Garden - 2026</p>
     <a href="https://stacker.news/jasonb" class="footer-link" target="_blank" rel="noopener">MADE BY JASONB</a>
