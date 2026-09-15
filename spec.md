@@ -19,6 +19,7 @@ thealternativedesktopsynthesizergarden/
   windows screenshot.png  # Window Candy instrument card screenshot
   labyrinth screenshot.png # Labyrinth instrument card screenshot
   equal justice screenshot.png # Equal Justice instrument card screenshot
+  hailstone harmonics screenshot.png # Hailstone Harmonics instrument card screenshot
   Poly Molly Screenshot.png    # Poly Molly instrument card screenshot
   spec.md             # This file
   README.md           # Project readme
@@ -67,7 +68,7 @@ Below-the-fold images use `loading="lazy"` and `decoding="async"`; instrument sc
 - Background gradient transitions from sky-black to sky-light
 
 ### 3. Instruments ("Behold, the Fruits of our Labor")
-- Five instrument cards in a grid, each linking to its subdomain:
+- Six instrument cards in a grid, each linking to its subdomain:
 
 | Card | Name | Subdomain | Description | Tag |
 |------|------|-----------|-------------|-----|
@@ -75,7 +76,8 @@ Below-the-fold images use `loading="lazy"` and `decoding="async"`; instrument sc
 | 2 | Window Candy | windowcandy.thealternativedesktopsynthesizer.garden | A love letter to an era when the desktop was a frontier. Nostalgia rendered as sound, dial-up tones turned to drones. Is it practical? That's for me to know and for you to know too, unless you don't want to. idk | Canned Nostalgia |
 | 3 | Labyrinth | labyrinth.thealternativedesktopsynthesizer.garden | An instrument that tends itself. Knobs turn without your touch, parameters drift like wind through olive branches. Surrender control. Try playing some notes and hitting the wild button frantically for a different, less pleasant approach. | Autonomous Synth |
 | 4 | Equal Justice | equaljustice.thealternativedesktopsynthesizer.garden | One note to rule them all, and in the equal temperament bind them. One ground note, locked in perfect (well, equal) temperament, while every overtone floats above in pure just intonation. It's like building a church on a parking lot. Beautiful above, asphalt below. Does it sound incredible? Only if you don't think too hard about the foundation. | Hybrid Tuning |
-| 5 | Poly Molly | polymolly.thealternativedesktopsynthesizer.garden | A polyrhythmic synthesized drum machine that plays in more time signatures than you can count on both hands. And maybe some feet. Set your ratios, hit start, and try not to think about the existential implications of a hi-hat existing in 7/4 while the kick is in 4/4. Your brain will adjust. Probably. | Polyrhythmic Drums |
+| 5 | Hailstone Harmonics | hailstoneharmonics.thealternativedesktopsynthesizer.garden | The Collatz conjecture, played as music. Halve an even number and the melody falls; triple an odd one and add one, and it leaps. Every number ever tested comes home to 1, the tonic, and nobody in nearly ninety years has managed to prove why. We couldn't either, but we did make it sound pretty. Hail is bad for gardens. | Sonified Math |
+| 6 | Poly Molly | polymolly.thealternativedesktopsynthesizer.garden | A polyrhythmic synthesized drum machine that plays in more time signatures than you can count on both hands. And maybe some feet. Set your ratios, hit start, and try not to think about the existential implications of a hi-hat existing in 7/4 while the kick is in 4/4. Your brain will adjust. Probably. | Polyrhythmic Drums |
 
 - Each card has a full-width screenshot with triple-layered flamboyant border (inner gold gradient, dark outer frame, outermost gold gradient)
 - Screenshots at 55% opacity by default, fully opaque on hover

@@ -14,6 +14,7 @@ Each instrument lives on its own subdomain:
 - [Window Candy](https://windowcandy.thealternativedesktopsynthesizer.garden) — Nostalgia rendered as sound
 - [Labyrinth](https://labyrinth.thealternativedesktopsynthesizer.garden) — Autonomous self-tending synth
 - [Equal Justice](https://equaljustice.thealternativedesktopsynthesizer.garden) — Hybrid tuning: an equal-tempered ground note with just-intonation overtones
+- [Hailstone Harmonics](https://hailstoneharmonics.thealternativedesktopsynthesizer.garden) — The Collatz conjecture sonified: every hailstone sequence resolves to the tonic
 - [Poly Molly](https://polymolly.thealternativedesktopsynthesizer.garden) — Polyrhythmic synthesized drum machine
 
 ## Features
